@@ -45,8 +45,11 @@ defmodule VintageNetExample.MixProject do
       {:toolshed, "~> 0.2"},
 
       # Dependencies for all targets except :host
-      {:nerves_runtime, "~> 0.6", targets: @all_targets},
-      {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
+      {:nerves_runtime, "~> 0.10", targets: @all_targets},
+      {:busybox, "~> 0.1", targets: @all_targets},
+      {:vintage_net, "~> 0.4", targets: @all_targets},
+      {:nerves_firmware_ssh, "~> 0.2", targets: @all_targets},
+      {:nerves_time, "~> 0.2", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.8", runtime: false, targets: :rpi},
@@ -56,7 +59,7 @@ defmodule VintageNetExample.MixProject do
       {:nerves_system_rpi3a, "~> 1.8", runtime: false, targets: :rpi3a},
       {:nerves_system_rpi4, "~> 1.8", runtime: false, targets: :rpi4},
       {:nerves_system_bbb, "~> 2.3", runtime: false, targets: :bbb},
-      {:nerves_system_x86_64, "~> 1.8", runtime: false, targets: :x86_64},
+      {:nerves_system_x86_64, "~> 1.8", runtime: false, targets: :x86_64}
     ]
   end
 

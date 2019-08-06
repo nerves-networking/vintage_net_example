@@ -23,19 +23,21 @@ if keys == [],
 config :nerves_firmware_ssh,
   authorized_keys: Enum.map(keys, &File.read!/1)
 
-# Configure nerves_init_gadget.
-# See https://hexdocs.pm/nerves_init_gadget/readme.html for more information.
-
-# Setting the node_name will enable Erlang Distribution.
-# Only enable this for prod if you understand the risks.
-node_name = if Mix.env() != :prod, do: "vintage_net_example"
-
-config :nerves_init_gadget,
-  ifname: "usb0",
-  address_method: :dhcpd,
-  mdns_domain: "nerves.local",
-  node_name: node_name,
-  node_host: :mdns_domain
+config :vintage_net,
+  regulatory_domain: "US",
+  config: [
+    {"eth0",
+     %{
+       type: VintageNet.Technology.Ethernet,
+       ipv4: %{
+         method: :dhcp
+       }
+     }},
+    {"wlan0",
+     %{
+       type: VintageNet.Technology.WiFi
+     }}
+  ]
 
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
