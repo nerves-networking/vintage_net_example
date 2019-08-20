@@ -46,4 +46,23 @@ config :mdns_lite,
   #   transport: "tcp",
   #   port: 22
   # }
-  services: []
+  services: [
+    %{
+      name: "Secure Socket",
+      protocol: "ssh",
+      transport: "tcp",
+      port: 22
+    },
+    %{
+      name: "SSH File Transfer",
+      protocol: "sftp",
+      transport: "tcp",
+      port: 21
+    },
+    %{
+      name: "Erlang Port Mapper",
+      protocol: "erlang",
+      transport: "tcp",
+      port: 4369
+    },
+  ]
