@@ -48,21 +48,21 @@ config :mdns_lite,
   # }
   services: [
     %{
-      name: "Secure Socket",
+      name: "SSH Remote Login Protocol",
       protocol: "ssh",
       transport: "tcp",
       port: 22
     },
     %{
-      name: "SSH File Transfer",
-      protocol: "sftp",
+      name: "Secure File Transfer Protocol over SSH",
+      protocol: "sftp-ssh",
       transport: "tcp",
-      port: 21
+      port: 22
     },
     %{
-      name: "Erlang Port Mapper",
-      protocol: "erlang",
+      name: "Erlang Port Mapper Daemon",
+      protocol: "epmd",
       transport: "tcp",
       port: 4369
-    },
+    }
   ]
