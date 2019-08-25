@@ -47,10 +47,10 @@ defmodule VintageNetExample.MixProject do
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.10", targets: @all_targets},
       {:busybox, "~> 0.1", targets: @all_targets},
-      {:vintage_net, "~> 0.4", targets: @all_targets},
+      {:vintage_net, "~> 0.5", targets: @all_targets},
       {:nerves_firmware_ssh, "~> 0.2", targets: @all_targets},
       {:nerves_time, "~> 0.2", targets: @all_targets},
-      {:mdns_lite, "~> 0.1", targets: @all_targets},
+      {:mdns_lite, "~> 0.2", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.8", runtime: false, targets: :rpi},

@@ -4,7 +4,7 @@
   "elixir_make": {:hex, :elixir_make, "0.6.0", "38349f3e29aff4864352084fc736fa7fa0f2995a819a737554f7ebd28b85aaab", [:mix], [], "hexpm"},
   "gen_state_machine": {:hex, :gen_state_machine, "2.0.5", "9ac15ec6e66acac994cc442dcc2c6f9796cf380ec4b08267223014be1c728a95", [:mix], [], "hexpm"},
   "mdns": {:hex, :mdns, "1.0.3", "f08414daf5636bf5cd364611e838818e9250c91a3282a817ad9174b03e757401", [:mix], [{:dns, "~> 2.0", [hex: :dns, repo: "hexpm", optional: false]}], "hexpm"},
-  "mdns_lite": {:hex, :mdns_lite, "0.1.0", "efad834847576ab7641d1016754ec6f512d765788ae3718e1ac6a648c85eab12", [:mix], [{:dns, "~> 2.1", [hex: :dns, repo: "hexpm", optional: false]}], "hexpm"},
+  "mdns_lite": {:hex, :mdns_lite, "0.2.1", "02bbb548e0dddbe878fdd0fc76a3e1ccb7e5d09e89d9fcadee90dc1359a0732b", [:mix], [{:dns, "~> 2.1", [hex: :dns, repo: "hexpm", optional: false]}], "hexpm"},
   "muontrap": {:hex, :muontrap, "0.4.4", "61b676605205d59f418bee65613e1b88368ee5281e141fbc81563954037667f6", [:make, :mix], [{:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "nerves": {:hex, :nerves, "1.5.1", "07079342db3a03d19694118a93f220359fbd94b6e174b98d1ea2709db9e81da9", [:mix], [{:distillery, "~> 2.1", [hex: :distillery, repo: "hexpm", optional: true]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: true]}], "hexpm"},
   "nerves_firmware_ssh": {:hex, :nerves_firmware_ssh, "0.4.4", "12b0d9c84ec9f79c1b0ac0de1c575372ef972d0c58ce21c36bf354062c6222d9", [:mix], [{:nerves_runtime, "~> 0.6", [hex: :nerves_runtime, repo: "hexpm", optional: false]}], "hexpm"},
@@ -35,5 +35,5 @@
   "system_registry": {:hex, :system_registry, "0.8.2", "df791dc276652fcfb53be4dab823e05f8269b96ac57c26f86a67838dbc0eefe7", [:mix], [], "hexpm"},
   "toolshed": {:hex, :toolshed, "0.2.10", "31e33f3bfbd88085a5f34844930a75e579940417873eb8a5c25b9525ad1a1372", [:mix], [{:nerves_runtime, "~> 0.8", [hex: :nerves_runtime, repo: "hexpm", optional: true]}], "hexpm"},
   "uboot_env": {:hex, :uboot_env, "0.1.1", "b01e3ec0973e99473234f27839e29e63b5b81eba6a136a18a78d049d4813d6c5", [:mix], [], "hexpm"},
-  "vintage_net": {:hex, :vintage_net, "0.4.1", "0b3deec841c478619ac38b332a76b626114e9793d69908fa1809d79b8a302e33", [:make, :mix], [{:busybox, "~> 0.1", [hex: :busybox, repo: "hexpm", optional: true]}, {:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:gen_state_machine, "~> 2.0.0", [hex: :gen_state_machine, repo: "hexpm", optional: false]}, {:muontrap, "~> 0.4.1", [hex: :muontrap, repo: "hexpm", optional: false]}], "hexpm"},
+  "vintage_net": {:hex, :vintage_net, "0.5.0", "211eee23ee294718fc54c0d4835aca8e2b1c392c52fd2cbb6bb7dc2a857ae842", [:make, :mix], [{:busybox, "~> 0.1", [hex: :busybox, repo: "hexpm", optional: true]}, {:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:gen_state_machine, "~> 2.0.0", [hex: :gen_state_machine, repo: "hexpm", optional: false]}, {:muontrap, "~> 0.4.1", [hex: :muontrap, repo: "hexpm", optional: false]}], "hexpm"},
 }
