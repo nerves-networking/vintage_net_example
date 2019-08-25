@@ -69,6 +69,7 @@ defmodule VintageNetExample.Application do
       {:key_cb, {Nerves.Firmware.SSH.Keys, cb_opts}},
       {:system_dir, Nerves.Firmware.SSH.Application.system_dir()},
       {:shell, {Elixir.IEx, :start, [iex_opts]}},
+      {:exec, &start_exec/3},
       {:subsystems, [:ssh_sftpd.subsystem_spec(cwd: '/')]}
     ])
   end
@@ -77,5 +78,19 @@ defmodule VintageNetExample.Application do
     [".iex.exs", "~/.iex.exs", "/etc/iex.exs"]
     |> Enum.map(&Path.expand/1)
     |> Enum.find("", &File.regular?/1)
+  end
+
+  defp start_exec(cmd, user, peer) do
+    spawn(fn -> exec(cmd, user, peer) end)
+  end
+
+  defp exec(cmd, _user, _peer) do
+    try do
+      {result, _env} = Code.eval_string(to_string(cmd))
+      IO.inspect(result)
+    catch
+      kind, value ->
+        IO.puts("** (#{kind}) #{inspect(value)}")
+    end
   end
 end
