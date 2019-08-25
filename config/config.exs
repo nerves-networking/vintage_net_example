@@ -26,10 +26,6 @@ config :shoehorn,
 
 config :logger, backends: [RingLogger]
 
-if Mix.target() != :host do
-  import_config "target.exs"
-end
-
 config :mdns_lite,
   # Use these values to construct the DNS resource record responses
   # to a DNS query.
@@ -66,3 +62,7 @@ config :mdns_lite,
       port: 4369
     }
   ]
+
+if Mix.target() != :host do
+  import_config "target.exs"
+end
