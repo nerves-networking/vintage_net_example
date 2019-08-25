@@ -15,6 +15,7 @@ defmodule VintageNetExample.MixProject do
       build_embedded: true,
       aliases: [loadconfig: [&bootstrap/1]],
       deps: deps(),
+      dialyzer: dialyzer(),
       releases: [{@app, release()}],
       preferred_cli_target: [run: :host, test: :host]
     ]
@@ -43,6 +44,7 @@ defmodule VintageNetExample.MixProject do
       {:shoehorn, "~> 0.6"},
       {:ring_logger, "~> 0.6"},
       {:toolshed, "~> 0.2"},
+      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev, :test], runtime: false},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.10", targets: @all_targets},
@@ -71,6 +73,12 @@ defmodule VintageNetExample.MixProject do
       include_erts: &Nerves.Release.erts/0,
       steps: [&Nerves.Release.init/1, :assemble],
       strip_beams: Mix.env() == :prod
+    ]
+  end
+
+  defp dialyzer() do
+    [
+      flags: [:race_conditions, :unmatched_returns, :error_handling, :underspecs]
     ]
   end
 end

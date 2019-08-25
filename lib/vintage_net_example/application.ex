@@ -5,8 +5,12 @@ defmodule VintageNetExample.Application do
 
   use Application
 
+  @spec start(Application.start_type(), any()) :: {:error, any} | {:ok, pid()}
   def start(_type, _args) do
-    start_ssh()
+    # Start the ssh server. In a real application, we'd need to link to the
+    # daemon pid that's returned and put it in a supervision tree so that
+    # crashes get handled properly.
+    _ = start_ssh()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
