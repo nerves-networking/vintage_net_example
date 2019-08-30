@@ -6,7 +6,7 @@
   "erlex": {:hex, :erlex, "0.2.4", "23791959df45fe8f01f388c6f7eb733cc361668cbeedd801bf491c55a029917b", [:mix], [], "hexpm"},
   "gen_state_machine": {:hex, :gen_state_machine, "2.0.5", "9ac15ec6e66acac994cc442dcc2c6f9796cf380ec4b08267223014be1c728a95", [:mix], [], "hexpm"},
   "mdns": {:hex, :mdns, "1.0.3", "f08414daf5636bf5cd364611e838818e9250c91a3282a817ad9174b03e757401", [:mix], [{:dns, "~> 2.0", [hex: :dns, repo: "hexpm", optional: false]}], "hexpm"},
-  "mdns_lite": {:hex, :mdns_lite, "0.2.1", "02bbb548e0dddbe878fdd0fc76a3e1ccb7e5d09e89d9fcadee90dc1359a0732b", [:mix], [{:dns, "~> 2.1", [hex: :dns, repo: "hexpm", optional: false]}], "hexpm"},
+  "mdns_lite": {:hex, :mdns_lite, "0.3.0", "f082876459a28ff54e669ea13fb718f88f1162e317e82137613bd74b4f2bd0bb", [:mix], [{:dns, "~> 2.1", [hex: :dns, repo: "hexpm", optional: false]}], "hexpm"},
   "muontrap": {:hex, :muontrap, "0.4.4", "61b676605205d59f418bee65613e1b88368ee5281e141fbc81563954037667f6", [:make, :mix], [{:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "nerves": {:hex, :nerves, "1.5.1", "07079342db3a03d19694118a93f220359fbd94b6e174b98d1ea2709db9e81da9", [:mix], [{:distillery, "~> 2.1", [hex: :distillery, repo: "hexpm", optional: true]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: true]}], "hexpm"},
   "nerves_firmware_ssh": {:hex, :nerves_firmware_ssh, "0.4.4", "12b0d9c84ec9f79c1b0ac0de1c575372ef972d0c58ce21c36bf354062c6222d9", [:mix], [{:nerves_runtime, "~> 0.6", [hex: :nerves_runtime, repo: "hexpm", optional: false]}], "hexpm"},

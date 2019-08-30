@@ -52,7 +52,7 @@ defmodule VintageNetExample.MixProject do
       {:vintage_net, "~> 0.5", targets: @all_targets},
       {:nerves_firmware_ssh, "~> 0.2", targets: @all_targets},
       {:nerves_time, "~> 0.2", targets: @all_targets},
-      {:mdns_lite, "~> 0.2", targets: @all_targets},
+      {:mdns_lite, "~> 0.3", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.8", runtime: false, targets: :rpi},
