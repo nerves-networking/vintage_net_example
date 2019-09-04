@@ -28,8 +28,10 @@ config :logger, backends: [RingLogger]
 
 config :mdns_lite,
   # Use these values to construct the DNS resource record responses
-  # to a DNS query.
-  host: :hostname,
+  # to a DNS query. The value for host includes an alias. An "A" type
+  # DNS query can be made to "nerves.local" as well as to the local
+  # :hostname
+  host: [:hostname, "nerves"],
   ttl: 120,
 
   # A list of this host's services. NB: There are two other mDNS values: weight
