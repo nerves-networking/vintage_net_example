@@ -22,7 +22,8 @@ current status.
 * [x] ssh and sftp support (defaults to using your `~/.ssh/id_*.pub` keys)
 * [x] Push-based firmware updates via `nerves_firmware_ssh`
 * [ ] Static IP addressing (not supported by `vintage_net` yet)
-* [x] mDNS advertisements to find the device
+* [x] mDNS advertisements to find the device (`nerves.local` and
+  `nerves-wxyz.local` work)
 * [x] Set the time using NTP (`mix nerves.new` doesn't do this, but it's one
   of the most frequent additions)
 * [ ] Start Erlang distribution

@@ -27,22 +27,16 @@ config :shoehorn,
 config :logger, backends: [RingLogger]
 
 config :mdns_lite,
-  # Use these values to construct the DNS resource record responses
-  # to a DNS query. The value for host includes an alias. An "A" type
-  # DNS query can be made to "nerves.local" as well as to the local
-  # :hostname
+  # The `host` key specifies what hostnames mdns_lite advertises.  `:hostname`
+  # advertises the device's hostname.local. For the official Nerves systems, this
+  # is "nerves-<4 digit serial#>.local".  mdns_lite also advertises
+  # "nerves.local" for convenience. If more than one Nerves device is on the
+  # network, delete "nerves" from the list.
+
   host: [:hostname, "nerves"],
   ttl: 120,
 
-  # A list of this host's services. NB: There are two other mDNS values: weight
-  # and priority that both default to zero unless included in the service below.
-  # Example service specification:
-  # %{
-  #   name: "Secure Socket",
-  #   protocol: "ssh",
-  #   transport: "tcp",
-  #   port: 22
-  # }
+  # Advertise the following services over mDNS.
   services: [
     %{
       name: "SSH Remote Login Protocol",
