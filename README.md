@@ -27,7 +27,7 @@ current status.
 * [x] Set the time using NTP (`mix nerves.new` doesn't do this, but it's one
   of the most frequent additions)
 * [ ] Start Erlang distribution
-* [ ] USB gadget mode support (1 wire for power, network, console on RPi0, RPi
+* [x] USB gadget mode support (1 wire for power, network, console on RPi0, RPi
   3A+, and BeagleBone)
 
 ## Configuration

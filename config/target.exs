@@ -26,6 +26,7 @@ config :nerves_firmware_ssh,
 config :vintage_net,
   regulatory_domain: "US",
   config: [
+    {"usb0", %{type: VintageNet.Technology.Gadget}},
     {"eth0",
      %{
        type: VintageNet.Technology.Ethernet,
